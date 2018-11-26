@@ -1,5 +1,5 @@
 <?php
- class Db {
+ class Db extends PDO {
      private static $instance = NULL;
      private function __construct() {}
      private function __clone() {}
