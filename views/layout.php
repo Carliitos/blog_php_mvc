@@ -2,6 +2,8 @@
     <html>
 
     <head>
+        <LINK REL=StyleSheet HREF="estils.css" TYPE="text/css" MEDIA=screen>
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     </head>
 
@@ -12,11 +14,19 @@
             <a href='?controller=posts&action=insert'>Insert</a>
         </header>
 
-        <?php require_once('routes.php'); ?>
+        <?php require_once('routes.php'); 
 
+
+
+        ?>
+
+  </tr>
+        </table>
+        </div>
         <footer>
             Copyright
         </footer>
+
     </body>
 
     </html>

@@ -1,0 +1,36 @@
+body{
+	font-family: 'Noto Sans SC', sans-serif;
+
+	background-color: #c9cfd9a1 !important;
+}
+a {
+    color: #ffffff !important;
+    margin-right: 2rem;
+    text-decoration: none;
+}
+header {
+    background-color: #6D7D97;
+    padding: 2rem 2rem 2rem 6rem;
+    color: white;
+    font-size: 2rem;
+}
+.home {
+    padding: 6rem;
+}
+footer {
+    background-color: 97A1B4;
+    padding: 2rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    color: #e6e6e6;
+    align-items: center;
+}
+.ver {
+    color: #837ebd !important;
+}

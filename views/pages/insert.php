@@ -1,6 +1,6 @@
 
-<form action="?controller=posts&action=insertar" method="post">
- 
+<form action="?controller=posts&action=insertar" method="post" enctype="multipart/form-data">
+    <div class="home">
     <table class='table table-hover table-responsive table-bordered'>
  
         <tr>
@@ -19,7 +19,7 @@
         </tr>
          <tr>
             <td>Image</td>
-            <td><input type="file" name="image" /></td>
+            <td><input type="file" id="image" name="image" /></td>
         </tr>
         <tr>
             <td></td>
@@ -29,4 +29,5 @@
         </tr>
  
     </table>
+</div>
 </form>
