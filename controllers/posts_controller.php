@@ -5,6 +5,7 @@ class PostsController {
  $posts = Post::all();
  require_once('views/posts/index.php');
  }
+
   public function insert() {
  // Guardamos todos los posts en una variable
  //$posts = Post::all();

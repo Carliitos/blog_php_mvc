@@ -11,6 +11,10 @@ function call($controller, $action) {
         require_once('models/post.php');
         $controller = new PostsController();
      break;
+     case 'sections':
+        require_once('views/posts/sections.php');
+        $controller = new SectionController();
+        break;
  }
  // llama al método guardado en $action
  $controller->{ $action }();
@@ -19,7 +23,8 @@ function call($controller, $action) {
 // consideramos estos valores "permitidos"
 // agregando una entrada para el nuevo controlador y sus acciones.
 $controllers = array(   'pages' => ['home', 'error'],
-                        'posts' => ['index', 'show','modificar', 'insert','insertar', 'delete','updatePost']);
+                        'posts' => ['index', 'show','modificar', 'insert','insertar', 'delete','updatePost','sections','sectionInsert'],
+                        'sections'=>['sections','sectionInsert','index','delete','modificar','updatePost','show']);
 // verifica que tanto el controlador como la acción solicitados estén permitidos
 // Si alguien intenta acceder a otro controlador y/o acción, será redirigido al método de
 //error del controlador de pages.
