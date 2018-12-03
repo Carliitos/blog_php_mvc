@@ -2,7 +2,7 @@
 <?php 
 class Section {
  // definimos tres atributos
- // los declaramos como públicos para acceder directamente $post->author
+ // los declaramos como públicos para acceder directamente $section->author
  public $id;
  public $tema;
  public $tipus;
@@ -16,6 +16,7 @@ $this->tipus = $tipus;
 $this->creacio = $creacio;
 $this->modificacio = $modificacio;
  }
+ //Función utilizada para mostrar todas las secciones
  public static function all() {
  $list = [];
  $db = Db::getInstance();
@@ -28,6 +29,7 @@ $this->modificacio = $modificacio;
  }
  return $list;
  }
+ //Función de devuelve todos los campos de una tabla pasando el id
  public static function find($id) {
  $db = Db::getInstance();
  // nos aseguramos que $id es un entero
@@ -39,7 +41,7 @@ $this->modificacio = $modificacio;
  return new Section($section['id'], $section['tema'], $section['tipus'],
  	$section['creacio'], $section['modificacio']);
  }
-
+//Inserta una nueva sección
 public function insertar() {
     $tema=$_POST['tema'];
     $tipus=$_POST['tipus'];
@@ -54,6 +56,7 @@ public function insertar() {
     $req->execute();
 
 	}
+	//Modifica una sección
 	public function modificar() {
     $tema=$_POST['tema'];
     $tipus=$_POST['tipus'];
@@ -68,6 +71,7 @@ public function insertar() {
     $req->execute();
 
 	}
+	//Borra una sección
 	 public static function delete() {
         $db = Db::getInstance();
         $req = $db->prepare('DELETE FROM section WHERE id = '.$_GET['id']);

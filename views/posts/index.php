@@ -1,3 +1,6 @@
+<!--
+Muestra todos los posts
+-->
 
 <div class="home">
 <p><strong>Listado de los posts:</strong></p>

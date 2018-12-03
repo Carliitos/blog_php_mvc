@@ -1,3 +1,7 @@
+<!--
+Formulario para crear una nueva sección
+-->
+
 <form action="?controller=sections&action=sectionInsert" method="post" enctype="multipart/form-data">
     <div class="home">
     <table class='table table-hover table-responsive table-bordered'>

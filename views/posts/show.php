@@ -1,3 +1,6 @@
+<!--
+Muestra un most
+-->
 <div class="home">
 <p><strong>Post #<?php echo $post->id; ?></strong></p>
 <p><strong>Autor: </strong><?php echo $post->author; ?></p>

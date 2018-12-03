@@ -1,8 +1,12 @@
+<!--
+Formulario modificar una sección
+-->
+
 <LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC" rel="stylesheet">
 
 
-<form action="?controller=sections&action=updatePost" method="post" enctype="multipart/form-data">
+<form action="?controller=sections&action=updateSection" method="post" enctype="multipart/form-data">
     
     <table class='table table-hover table-responsive table-bordered'>
         

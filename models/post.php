@@ -18,6 +18,7 @@ $this->modificacio = $modificacio;
 $this->image = $image;
 $this->title = $title;
  }
+ //Función utilizada para mostrar todos los posts
  public static function all() {
  $list = [];
  $db = Db::getInstance();
@@ -30,6 +31,7 @@ $this->title = $title;
  }
  return $list;
  }
+ //Clase que devueve todos los campos de una tabla pasando el id
  public static function find($id) {
  $db = Db::getInstance();
  // nos aseguramos que $id es un entero
@@ -41,8 +43,9 @@ $this->title = $title;
  return new Post($post['id'], $post['author'], $post['content'],
  	$post['creacio'], $post['modificacio'], $post['image'], $post['title']);
  }
-
+//Inserta los parametros del formulario
  public function insertar() {
+    //Toma los parámetros escogidos en el formulario y los guarda en variables
     $author=$_POST['author'];
     $content=$_POST['content'];
     $title=$_POST['title'];
@@ -55,7 +58,7 @@ $foto=htmlspecialchars(strip_tags($_FILES['image']['tmp_name']));
     $foto=!empty($_FILES["image"]["name"])
         ? sha1_file($_FILES['image']['tmp_name']) . "-" . basename($_FILES["image"]["name"]) : "";
 
-
+        //Prepara la consulta
     $req = $db->prepare("INSERT into posts(author,content, creacio, image, title) VALUES (:author, :content,:creacio,:image,:title)");
     $req->bindParam(':author', $author);
     $req->bindParam(':content', $content);
@@ -63,7 +66,7 @@ $foto=htmlspecialchars(strip_tags($_FILES['image']['tmp_name']));
     $req->bindParam(':title', $title);
     $req->bindParam(':image', $foto);   
 
-
+    //Si realiza la consulta entonces guarda la imagen en la carpeta uploads
     if($req->execute()){
         echo "<div class='alert alert-success'>S'ha creat el POST</div>";
 
@@ -144,7 +147,7 @@ $foto=htmlspecialchars(strip_tags($_FILES['image']['tmp_name']));
         echo "<div class='alert alert-danger'>No s'ha pogut crear el producte</div>";
     }
  }
-
+//Realiza lo mismo que en la función update pero en la consulta hace un "UPDATE"
 public static function updatePost() {
     $author=$_POST['author'];
     $content=$_POST['content'];
@@ -249,10 +252,13 @@ else{
     }
  }
 
-
+//Elimina un post
  public static function delete() {
+    //Conecta a la base
         $db = Db::getInstance();
+        //Prepara la consulta
         $req = $db->prepare('DELETE FROM posts WHERE id = '.$_GET['id']);
+        //Realiza la consulta
         return $req->execute();
     }
  

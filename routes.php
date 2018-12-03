@@ -24,7 +24,7 @@ function call($controller, $action) {
 // agregando una entrada para el nuevo controlador y sus acciones.
 $controllers = array(   'pages' => ['home', 'error'],
                         'posts' => ['index', 'show','modificar', 'insert','insertar', 'delete','updatePost','sections','sectionInsert'],
-                        'sections'=>['sections','sectionInsert','index','delete','modificar','updatePost','show']);
+                        'sections'=>['sections','sectionInsert','index','delete','modificar','updateSection','show']);
 // verifica que tanto el controlador como la acción solicitados estén permitidos
 // Si alguien intenta acceder a otro controlador y/o acción, será redirigido al método de
 //error del controlador de pages.

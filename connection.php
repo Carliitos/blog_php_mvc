@@ -1,4 +1,5 @@
 <?php
+//Archivo que conecta con la base de datos pasando por parametros el nombre y el tipo de conexión
  class Db extends PDO {
      private static $instance = NULL;
      private function __construct() {}

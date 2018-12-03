@@ -1,3 +1,6 @@
+<!--
+Formulario para modificar un post
+-->
 <LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC" rel="stylesheet">
 

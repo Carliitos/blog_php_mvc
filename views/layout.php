@@ -1,3 +1,6 @@
+<!--
+html base con el header y el footer
+-->
 <DOCTYPE html>
     <html>
 

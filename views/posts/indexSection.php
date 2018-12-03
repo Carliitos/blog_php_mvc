@@ -1,3 +1,7 @@
+<!--
+Muestra todas las secciones de la tabla secciones
+-->
+
 <div class="home">
 <p><strong>Listado de Seccones:</strong></p>
 <table style='width:100%'>
